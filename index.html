@@ -5,132 +5,413 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hemanth Reganti - Chief Technology Architect & AI Visionary</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #1e3a8a, #1e40af);
-            color: white;
+        * {
             margin: 0;
-            padding: 40px 20px;
-            min-height: 100vh;
-            text-align: center;
+            padding: 0;
+            box-sizing: border-box;
         }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-        
-        .title {
-            color: #f59e0b;
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-            padding: 10px 20px;
-            border: 2px solid #f59e0b;
-            border-radius: 25px;
-            display: inline-block;
-            background: rgba(245, 158, 11, 0.1);
-        }
-        
-        .tagline {
-            font-size: 2rem;
-            margin-bottom: 30px;
-            font-weight: bold;
-        }
-        
-        .highlight {
-            color: #f59e0b;
-        }
-        
-        .description {
-            font-size: 1.2rem;
-            margin-bottom: 40px;
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
+            color: white;
             line-height: 1.6;
+            overflow-x: hidden;
         }
-        
-        .contact {
-            margin-top: 40px;
+
+        .header {
+            padding: 2rem;
+            text-align: left;
+            position: relative;
         }
-        
-        .contact h2 {
-            color: #f59e0b;
-            margin-bottom: 20px;
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
         }
-        
-        .contact p {
-            font-size: 1.1rem;
-            margin: 10px 0;
+
+        .name {
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
         }
-        
-        a {
-            color: #f59e0b;
+
+        .social-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-btn {
+            padding: 0.5rem 1rem;
+            border: 1px solid #10b981;
+            background: rgba(16, 185, 129, 0.1);
+            color: #10b981;
             text-decoration: none;
-            font-weight: bold;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
         }
-        
-        a:hover {
-            text-decoration: underline;
+
+        .social-btn:hover {
+            background: #10b981;
+            color: white;
         }
-        
-        .section {
-            margin: 40px 0;
-            padding: 30px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-        }
-        
-        .section h2 {
+
+        .title-badge {
+            display: inline-block;
+            background: rgba(245, 158, 11, 0.2);
             color: #f59e0b;
-            margin-bottom: 20px;
-            font-size: 1.8rem;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid #f59e0b;
+            margin-bottom: 2rem;
         }
-        
+
+        .main-title {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .main-title .highlight {
+            color: #f59e0b;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #cbd5e1;
+            margin-bottom: 3rem;
+            max-width: 800px;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 4rem;
+        }
+
+        .btn-primary {
+            background: #f59e0b;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #d97706;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: rgba(139, 92, 246, 0.2);
+            color: #a78bfa;
+            padding: 1rem 2rem;
+            border: 1px solid #8b5cf6;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: #8b5cf6;
+            color: white;
+        }
+
+        .profile-section {
+            display: flex;
+            justify-content: center;
+            margin: 4rem 0;
+        }
+
+        .profile-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 4px solid #f59e0b;
+            object-fit: cover;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .content-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            margin: 4rem 0;
+            padding: 3rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #f59e0b;
+            font-weight: 700;
+        }
+
+        .section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #10b981;
+            font-weight: 600;
+        }
+
         .section p {
             font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 15px;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: #e2e8f0;
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .expertise-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .expertise-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .expertise-card h4 {
+            color: #f59e0b;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .expertise-card p {
+            font-size: 1rem;
+            color: #cbd5e1;
+        }
+
+        .achievements {
+            list-style: none;
+            padding: 0;
+        }
+
+        .achievements li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: #e2e8f0;
+        }
+
+        .achievements li:before {
+            content: "•";
+            color: #f59e0b;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+
+        .contact-section {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: rgba(0, 0, 0, 0.2);
+            margin-top: 4rem;
+        }
+
+        .contact-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #f59e0b;
+        }
+
+        .contact-section p {
+            font-size: 1.2rem;
+            color: #cbd5e1;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            font-size: 1.1rem;
+            color: #e2e8f0;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.5rem;
+            }
+            
+            .header-top {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .profile-image {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .expertise-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Hemanth Reganti</h1>
-        <div class="title">Chief Technology Architect & AI Visionary</div>
+    <div class="header">
+        <div class="header-top">
+            <div class="name">Hemanth Reganti</div>
+            <div class="social-buttons">
+                <a href="https://www.linkedin.com/in/hemanth-reganti-147153178" target="_blank" class="social-btn">LinkedIn</a>
+                <a href="https://x.com/RegantiHem45946" target="_blank" class="social-btn">X</a>
+            </div>
+        </div>
+
+        <div class="title-badge">Chief Technology Architect</div>
         
-        <div class="tagline">
+        <h1 class="main-title">
             Transforming <span class="highlight">Vision</span> into Value
-        </div>
+        </h1>
         
-        <div class="description">
+        <p class="subtitle">
             Pioneering Intelligent Enterprise Transformation Through Strategic Technology Leadership
-        </div>
+        </p>
         
+        <div class="action-buttons">
+            <a href="https://www.linkedin.com/in/hemanth-reganti-147153178" target="_blank" class="btn-primary">
+                Connect on LinkedIn
+            </a>
+            <a href="#insights" class="btn-secondary">
+                Explore Insights
+            </a>
+        </div>
+    </div>
+
+    <div class="profile-section">
+        <img src="https://rhayxkul.manus.space/assets/hemanth-corrected-photo-C6X4dkSZ.png" alt="Hemanth Reganti - Chief Technology Architect" class="profile-image">
+    </div>
+
+    <div class="content-section">
         <div class="section">
-            <h2>Professional Profile</h2>
-            <p>As a Chief Technology Architect, I architect and lead the future of enterprise technology, seamlessly blending cutting-edge AI/ML, robotics, and emerging space technologies with robust SAP Core enterprise systems (S/4 HANA) to drive measurable business outcomes and mission success.</p>
+            <h2>Visionary Technology Leader</h2>
+            <p>As a Chief Technology Architect, I architect and lead the future of enterprise technology, seamlessly blending cutting-edge AI/ML, robotics, and emerging space technologies with robust SAP Core enterprise systems (S/4 HANA) to drive measurable business outcomes and mission success. My expertise lies in transforming complex technological visions into scalable, ROI-driven solutions that position organizations at the forefront of digital innovation.</p>
             
-            <p>With a foundation in business strategy from UC Berkeley Haas School of Business and over 7 years of progressive leadership experience, I bring a unique combination of technical depth and executive acumen to every engagement.</p>
+            <p>With a foundation in business strategy from UC Berkeley Haas School of Business and over 7 years of progressive leadership experience, I bring a unique combination of technical depth and executive acumen to every engagement. As the founder of hibot.ai, I've demonstrated my commitment to innovation through the development of intelligent chatbot solutions that redefine user-friendly and solve real-world problems.</p>
         </div>
-        
+
         <div class="section">
             <h2>Areas of Expertise</h2>
-            <p><strong>Technology Leadership:</strong> Enterprise Architecture, AI/ML Strategy, Digital Transformation</p>
-            <p><strong>Business Strategy:</strong> Strategic Planning, Executive Leadership, Innovation Management</p>
-            <p><strong>Technical Systems:</strong> SAP S/4 HANA, Cloud Architecture, Emerging Technologies</p>
+            <p>Driving innovation across multiple technology domains with strategic vision and hands-on expertise</p>
+            
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <h4>C-Level Tech Advisory</h4>
+                    <p>Strategic technology guidance for executive leadership and board-level decision making.</p>
+                </div>
+                
+                <div class="expertise-card">
+                    <h4>Intelligent Enterprise</h4>
+                    <p>Architecting smart, connected business ecosystems with AI-driven automation.</p>
+                </div>
+                
+                <div class="expertise-card">
+                    <h4>SAP S/4HANA & AI/ML</h4>
+                    <p>Enterprise transformation through SAP modernization and machine learning integration.</p>
+                </div>
+                
+                <div class="expertise-card">
+                    <h4>Robotics & Space Tech</h4>
+                    <p>Pioneering advanced robotics solutions and space technology applications.</p>
+                </div>
+                
+                <div class="expertise-card">
+                    <h4>Digital Twins Innovation</h4>
+                    <p>Creating virtual replicas for predictive analytics and system optimization.</p>
+                </div>
+                
+                <div class="expertise-card">
+                    <h4>Scalable Platforms</h4>
+                    <p>Building robust, enterprise-grade platforms that scale with business growth.</p>
+                </div>
+            </div>
         </div>
-        
-        <div class="contact">
-            <h2>Connect With Me</h2>
+
+        <div class="section">
+            <h2>Professional Excellence</h2>
+            <h3>Chief Technology Architect</h3>
+            <p><strong>Avant-Garde Solutions, Ltd. • 7+ years</strong></p>
+            <p>Leading end-to-end technology strategy and architecture, integrating SAP enterprise systems with cutting-edge AI/ML capabilities. Driving intelligent enterprise initiatives and building scalable platforms that deliver measurable business value.</p>
+            
+            <h4>Key Achievements</h4>
+            <ul class="achievements">
+                <li>SAP S/4HANA Finance & Logistics transformation leadership</li>
+                <li>SAP Joule AI and SAP AI Core integration expertise</li>
+                <li>Technology vision and roadmapping for enterprise clients</li>
+                <li>Cross-functional team leadership and customer relationship management</li>
+            </ul>
+        </div>
+
+        <div class="section" id="insights">
+            <h2>Insights & Innovation</h2>
+            <p>Leading industry conversations and driving technological advancement through thought leadership</p>
+            
+            <h3>hibot.ai Founder & Visionary</h3>
+            <p>Founded hibot.ai with an innovative approach to chatbot technology, focusing on user-friendly design and solving real-world problems. The company represents a significant contribution to the conversational AI industry, demonstrating practical applications of intelligent automation.</p>
+            
+            <h3>Navigating AI Transformation</h3>
+            <p>Sharing insights on the strategic implementation of AI and machine learning in enterprise environments, with focus on practical applications, ROI measurement, and organizational change management in the age of intelligent automation.</p>
+        </div>
+    </div>
+
+    <div class="contact-section">
+        <h2>Connect with Hemanth</h2>
+        <p>Ready to discuss technology strategy, innovation opportunities, or potential collaborations?</p>
+        <div class="contact-info">
             <p><strong>Location:</strong> Irving, Texas, United States</p>
-            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/hemanth-reganti-147153178" target="_blank">Connect on LinkedIn</a></p>
-            <p><strong>X (Twitter):</strong> <a href="https://x.com/RegantiHem45946" target="_blank">Follow on X</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/hemanth-reganti-147153178" target="_blank" style="color: #f59e0b;">Connect on LinkedIn</a></p>
+            <p><strong>X (Twitter):</strong> <a href="https://x.com/RegantiHem45946" target="_blank" style="color: #f59e0b;">Follow on X</a></p>
         </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2025 Hemanth Reganti. All rights reserved.</p>
     </div>
 </body>
 </html>
